@@ -7,12 +7,13 @@
     box-sizing: border-box;
     font-family: "Poppins", sans-serif;
 }
+
 :root {
     /* Colors*/
     --white-color: #fff;
     --dark-color: #252525;
     --primary-color: #64b5f6;
-    --secondary-color: #f3961c;
+    --secondary-color: #cc1cf3;
     --light-pink-color: #faf4f5;
     --medium-gray-color: #ccc;
 
@@ -45,35 +46,65 @@
 
 /* Styleings for whole site*/
 
-ul{
+ul {
     list-style: none;
 }
 
-a{
+a {
     text-decoration: none;
 }
 
-button{
+button {
     cursor: pointer;
     border: none;
     background: none;
 }
 
-img{
+img {
     width: 100px;
 }
-/* Nav */
+
+.section-content{
+    margin: 0 auto;
+    padding: 0 20px;
+    max-width: var(--site-max-width);
+}
+
+/* Navbar styling*/
+
 header {
     background: var(--primary-color);
 }
 
-.navbar .nav-logo .logo-text{
-    color:var(--white-color);
+header .navbar {
+    display: flex;
+    padding: 20px;
+    align-items: center;
+    justify-content: space-around;
 }
 
+.navbar .nav-logo .logo-text {
+    color: var(--white-color);
+    font-size: var(--font-size-xl);
+    font-weight: var(--font-weight-semibold);
 
+}
 
+.navbar .nav-menu{
+    display: flex;
+    gap: 10px;
+}
 
-.navbar .nav-menu.nav-link{
-color:var(--white-color);
+.navbar .nav-menu.nav-link {
+    padding: 10px 18px;
+    color: var(--white-color);
+    font-size: var(--font-size-m);
+    background: var(--secondary-color);
+    border-radius: var(--border-radius-m);
+    transition: 0.3s ease;
+}
+
+.navbar .nav-menu .nav-link:hover{
+    color: var(--primary-color);
+    background: var(--secondary-color);
 }
