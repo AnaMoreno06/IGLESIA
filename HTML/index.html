@@ -1,0 +1,114 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Parroquia Santa Lucia</title>
+    <link rel="stylesheet" href="/CSS/Styles.css">
+</head>
+
+<body>
+  <header>
+    <div class="logo-titulo">
+      <img src="/IMG/412321289_312990951727702_2486295061545042712_n.jpg" alt="Logo Santa Lucía" />
+      <h1>Iglesia Santa Lucía</h1>
+    </div>
+    <nav>
+      <a href="#home" onclick="mostrarSeccion('home')">Inicio</a>
+      <a href="#informacion" onclick="mostrarSeccion('informacion')">Información</a>
+      <a href="#solicitudes" onclick="mostrarSeccion('solicitudes')">Solicitudes</a>
+      <a href="#contacto" onclick="mostrarSeccion('contacto')">Contáctanos</a>
+    </nav>
+  </header>
+
+
+<section id="home" class="active">
+<h2>Bienvenidos a la Iglesia Santa Lucía</h2>
+<img src="/IMG/468391602_535941732765955_119028500122460128_n.jpg" alt="Iglesia principal" class="iglesia-principal" style="max-width: 400px; height: auto;">
+<p style="text-align: center; margin-top: 1rem;">La Iglesia Santa Lucía fue fundada en 1985, dedicada a acompañar espiritualmente a la comunidad. Cuenta con cuatro capillas satélites distribuidas en distintos sectores del barrio.</p>
+
+<div class="mini-iglesias">
+  <div class="iglesia-card" onclick="mostrarDetalle('Nuestra Señora de la Salud')">
+    <img src="/IMG/salud.jpg" alt="Nuestra Señora de la Salud" style="height: 180px;">
+    <div class="iglesia-info">Nuestra Señora de la Salud</div>
+  </div>
+  <div class="iglesia-card" onclick="mostrarDetalle('Villa Sara')">
+    <img src="villa_sara.jpg" alt="Villa Sara" style="height: 180px;">
+    <div class="iglesia-info">Villa Sara</div>
+  </div>
+  <div class="iglesia-card" onclick="mostrarDetalle('Guadalupe')">
+    <img src="guadalupe.jpg" alt="Guadalupe" style="height: 180px;">
+    <div class="iglesia-info">Guadalupe</div>
+  </div>
+  <div class="iglesia-card" onclick="mostrarDetalle('Divina Misericordia')">
+    <img src="divina.jpg" alt="Divina Misericordia" style="height: 180px;">
+    <div class="iglesia-info">Divina Misericordia</div>
+  </div>
+</div>
+
+<div class="detalle-iglesia" id="detalle-iglesia"></div>
+</section>
+
+<section id="informacion">
+<h2>Ministerios y Avisos</h2>
+<div class="avisos-grid">
+  <div class="aviso">
+    <img src="aviso1.jpg" alt="Aviso 1">
+    <p>Misa especial este domingo a las 10am</p>
+  </div>
+  <div class="aviso">
+    <img src="aviso2.jpg" alt="Aviso 2">
+    <p>Reunión de catequesis el viernes a las 5pm</p>
+  </div>
+  <div class="aviso">
+    <img src="aviso3.jpg" alt="Aviso 3">
+    <p>Grupo de oración todos los miércoles</p>
+  </div>
+</div>
+</section>
+
+<section id="solicitudes">
+<h2>Sacramentos</h2>
+<div class="solicitudes-grid">
+  <div class="solicitud">
+    <img src="comunion.jpg" alt="Primera Comunión">
+    <p>Solicita información para la Primera Comunión</p>
+  </div>
+  <div class="solicitud">
+    <img src="bautizo.jpg" alt="Bautizos">
+    <p>Agenda tu bautizo con nosotros</p>
+  </div>
+  <div class="solicitud">
+    <img src="confirmacion.jpg" alt="Confirmación">
+    <p>Requisitos para la Confirmación</p>
+  </div>
+  <div class="solicitud">
+    <img src="matrimonio.jpg" alt="Matrimonio">
+    <p>Programa tu matrimonio religioso</p>
+  </div>
+</div>
+</section>
+
+<section id="contacto">
+<h2>Contáctanos</h2>
+<div class="contacto-grid">
+  <div class="contact-card">
+    <p><strong>Teléfono:</strong> 301 123 4567</p>
+    <p><strong>Dirección:</strong> Calle 123 #45-67</p>
+    <p><strong>Correo:</strong> contacto@iglesiasantalucia.org</p>
+    <p><strong>Facebook:</strong> Iglesia Santa Lucía</p>
+    <p><strong>Instagram:</strong> @santalucia_iglesia</p>
+  </div>
+</div>
+</section>
+
+<footer>
+<p>&copy; 2025 Iglesia Santa Lucía. Todos los derechos reservados.</p>
+</footer>
+
+
+<script src="script.js"></script>
+</body>
+
+</html>

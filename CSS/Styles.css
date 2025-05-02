@@ -1,110 +1,156 @@
-/*Importing Google fonts*/
-@import url('https://fonts.googleapis.com/css2?family=Miniver&family=Poppins:ital,wght@0,400;0,500;0,600;0,700;1,400&display=swap');
-
-* {
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
-    font-family: "Poppins", sans-serif;
-}
-
+/* Colores suaves inspirados en la nueva paleta */
 :root {
-    /* Colors*/
-    --white-color: #fff;
-    --dark-color: #252525;
-    --primary-color: #64b5f6;
-    --secondary-color: #cc1cf3;
-    --light-pink-color: #faf4f5;
-    --medium-gray-color: #ccc;
-
-
-    /* Font size*/
-    --font-size-s: 0.9rem;
-    --font-size-n: 1rem;
-    --font-size-m: 1.12rem;
-    --font-size-l: 1.5rem;
-    --font-size-xl: 2rem;
-    --font-size-xxl: 2.3rem;
-
-    /* Font wight*/
-
-    --font-weight-normal: 400;
-    --font-weight-medium: 500;
-    --font-weight-semibold: 600;
-    --font-weight-bold: 700;
-
-    /* Border radius */
-
-    --border-radius-s: 8px;
-    --border-radius-m: 30px;
-    --border-radius-circle: 50px;
-
-    /* Site mas width*/
-
-    --site-max-width: 1300px;
-}
-
-/* Styleings for whole site*/
-
-ul {
-    list-style: none;
-}
-
-a {
-    text-decoration: none;
-}
-
-button {
-    cursor: pointer;
-    border: none;
-    background: none;
-}
-
-img {
-    width: 100px;
-}
-
-.section-content{
-    margin: 0 auto;
-    padding: 0 20px;
-    max-width: var(--site-max-width);
-}
-
-/* Navbar styling*/
-
-header {
-    background: var(--primary-color);
-}
-
-header .navbar {
+    --color-fondo: #F1F0E8;
+    --color-principal: #89A8B2;
+    --color-secundario: #B3C8CF;
+    --color-texto: #333;
+    --color-acento: #E5E1DA;
+  }
+  
+  body {
+    margin: 0;
+    font-family: 'Segoe UI', sans-serif;
+    background-color: var(--color-fondo);
+    color: var(--color-texto);
+  }
+  
+  header {
     display: flex;
-    padding: 20px;
+    justify-content: space-between;
     align-items: center;
-    justify-content: space-around;
-}
-
-.navbar .nav-logo .logo-text {
-    color: var(--white-color);
-    font-size: var(--font-size-xl);
-    font-weight: var(--font-weight-semibold);
-
-}
-
-.navbar .nav-menu{
+    padding: 1rem 2rem;
+    background-color: var(--color-principal);
+    color: white;
+    flex-wrap: wrap;
+  }
+  
+  .logo-titulo {
     display: flex;
-    gap: 10px;
-}
-
-.navbar .nav-menu.nav-link {
-    padding: 10px 18px;
-    color: var(--white-color);
-    font-size: var(--font-size-m);
-    background: var(--secondary-color);
-    border-radius: var(--border-radius-m);
-    transition: 0.3s ease;
-}
-
-.navbar .nav-menu .nav-link:hover{
-    color: var(--primary-color);
-    background: var(--secondary-color);
-}
+    align-items: center;
+    gap: 1rem;
+  }
+  
+  .logo-titulo img {
+    width: 50px;
+    height: 50px;
+  }
+  
+  nav a {
+    margin-left: 1rem;
+    color: white;
+    text-decoration: none;
+    font-weight: bold;
+  }
+  
+  section {
+    display: none;
+    padding: 2rem;
+  }
+  
+  section.active {
+    display: block;
+  }
+  
+  h2 {
+    color: var(--color-acento);
+    text-align: center;
+  }
+  
+  .iglesia-principal {
+    display: block;
+    margin: 1rem auto;
+    max-width: 600px;
+    width: 90%;
+    height: auto;
+    border-radius: 1rem;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+  }
+  
+  .mini-iglesias {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+    gap: 1rem;
+    margin-top: 2rem;
+  }
+  
+  .iglesia-card {
+    position: relative;
+    cursor: pointer;
+    overflow: hidden;
+    border-radius: 1rem;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s ease;
+  }
+  
+  .iglesia-card img {
+    width: 100%;
+    height: 150px;
+    object-fit: cover;
+    display: block;
+  }
+  
+  .iglesia-card:hover {
+    transform: scale(1.05);
+  }
+  
+  .iglesia-info {
+    position: absolute;
+    bottom: 0;
+    background: rgba(0, 0, 0, 0.5);
+    color: white;
+    width: 100%;
+    text-align: center;
+    padding: 0.5rem;
+  }
+  
+  .detalle-iglesia {
+    margin-top: 1rem;
+    font-style: italic;
+    text-align: center;
+  }
+  
+  .avisos-grid,
+  .solicitudes-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+    gap: 1.5rem;
+    margin-top: 1.5rem;
+  }
+  
+  .aviso,
+  .solicitud {
+    background-color: var(--color-secundario);
+    padding: 1rem;
+    border-radius: 1rem;
+    box-shadow: 0 2px 6px rgba(0, 0, 0, 0.1);
+    text-align: center;
+  }
+  
+  .aviso img,
+  .solicitud img {
+    width: 100%;
+    height: 140px;
+    object-fit: cover;
+    border-radius: 0.5rem;
+  }
+  
+  .contacto-grid {
+    display: flex;
+    justify-content: center;
+    margin-top: 2rem;
+  }
+  
+  .contact-card {
+    background-color: var(--color-secundario);
+    padding: 2rem;
+    border-radius: 1rem;
+    box-shadow: 0 2px 6px rgba(0, 0, 0, 0.1);
+  }
+  
+  footer {
+    text-align: center;
+    padding: 1rem;
+    background-color: var(--color-principal);
+    color: white;
+    margin-top: 3rem;
+  }
